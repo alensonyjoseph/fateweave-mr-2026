@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#08090f"><link rel="icon" href="./favicon.svg" type="image/svg+xml"><meta name="description" content="FATEWEAVE: War of Futures. Command a living mixed-reality chess army. In AI duels, glimpse alternative timelines and spend limited Fate Weaves to turn one projected future into reality.">
+<title>FATEWEAVE · WAR OF FUTURES</title>  <script type="module" crossorigin src="./assets/index-Ccbf_yIF.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-kac2nJ9s.css">
+</head>
+<body>
+<div id="scene-container"></div><div id="loading" class="loading">THE ARMIES ARE AWAKENING</div>
+<div class="atmosphere"></div>
+<div class="ui">
+ <header class="top">
+   <div><div class="brand">FATE<span>WEAVE</span></div><div class="eyebrow">WAR OF FUTURES · A MIXED REALITY BATTLE</div></div>
+   <div class="top-actions"><button id="enter-xr" class="golden">ENTER MIXED REALITY</button><button id="mute">SOUND ON</button><button id="help-toggle">HOW TO PLAY</button></div>
+ </header>
+ <aside class="left">
+   <div class="chapter">CHAPTER I · THE FUTURES AWAKEN</div>
+   <h1>COMMAND THE WAR.<br><em>CHANGE ITS FATE.</em></h1>
+   <p>Your table. Your army. Three chances to rewrite tomorrow.</p>
+   <div class="hairline"></div>
+   <div class="overline">THE WAR TABLE</div>
+   <div class="turn" id="turn">IVORY TO MOVE</div>
+   <div class="meta" id="mode">AI OPPONENT</div>
+   <div class="meta pale" id="fate-state">FATE WEAVES · 3/3 REMAINING</div>
+   <div id="fate-choices" class="fate-choices" role="group" aria-label="Choose a projected future" hidden></div>
+ </aside>
+ <section class="side-ornament"><span>♔</span><span>✦</span><span>♞</span></section>
+ <footer class="bottom">
+   <div class="instructions">
+     <div class="overline">COMMAND THE LIVING ARMY</div>
+     <p id="message" aria-live="polite">Pinch an ivory warrior, then a glowing destination.</p>
+     <div class="moves" id="history">THE FIRST MOVE AWAITS</div>
+     <div class="controls">
+       <button id="new" class="golden">NEW WAR</button>
+       <button id="demo">WATCH A DUEL</button>
+       <button id="fate">✦ FATE WEAVE · 3/3</button>
+       <button id="ai">AI / TWO PLAYERS</button>
+       <button id="online-toggle">ONLINE FRIEND</button>
+       <button id="level">AI LEVEL · KNIGHT</button>
+       <button id="undo">UNDO MOVE</button>
+     </div>
+     <div class="voicebar"><button id="voice-toggle" aria-label="Speak a chess command">🎙 COMMAND</button><input id="voice-input" aria-label="Type a chess command" placeholder="e2 to e4 · knight f3 · fate sight" autocomplete="off" spellcheck="false"><button id="voice-send">SEND</button></div>
+     <div class="technical" id="fen" aria-hidden="true"></div>
+   </div>
+ </footer>
+</div>
+<div id="gameover" class="gameover"><div class="outcome"><div class="overline">THE BOARD HAS SPOKEN</div><h2 id="result">CHECKMATE</h2><p>Another fate awaits.</p><button onclick="document.getElementById('new')?.click()">BEGIN AGAIN</button></div></div>
+<div id="help" class="help" role="dialog" aria-modal="true" aria-label="How to play FATEWEAVE">
+ <div class="help-inner"><button id="help-close" class="close">CLOSE</button><div class="overline">A COMMANDER'S GRIMOIRE</div><h2>THE LIVING BOARD</h2>
+ <p>Command a living miniature army through real chess. During AI duels, you can spend one of three Fate Weaves to make a projected two-move future real. Every move remains legally validated; other modes retain standard chess.</p>
+ <ol>
+ <li><b>Choose a warrior.</b> Click it on desktop, or point and pinch on Meta Quest. Glowing squares show legal destinations.</li>
+ <li><b>Choose a square.</b> Click or pinch a highlighted destination; the warrior will move or attack.</li>
+ <li><b>Face the AI.</b> Ivory moves first; Crimson responds automatically. Switch AI / Two Players to play both sides on the same board.</li>
+ <li><b>Weave a future.</b> In an AI duel, select an ivory warrior and press FATE WEAVE. Up to three translucent timelines appear, including a predicted rival reply. Pinch one ghost to make both legal moves happen. You have three Fate charges per game. In local or online two-player mode, futures remain previews only.</li>
+ <li><b>Play online.</b> Open Online Friend before entering XR. The host sends an invitation code, the guest sends a reply, then both players see the same legal moves. Network restrictions may prevent direct peer-to-peer connections.</li>
+ <li><b>Command by voice or text.</b> Try “e2 to e4”, “knight to f3”, “Fate Sight” or “undo”. Microphone recognition is browser-dependent; pinching always works.</li>
+ <li><b>Play again or undo.</b> Rewind moves during local practice. Online matches disable undo to prevent desynchronization. On Quest, the six front-edge sigils offer spatial controls.</li>
+ </ol><p>Quest scene understanding may place the board on a recognised table in your room. Animated cinematic duels, enhanced assets and headset-specific performance tuning remain in development.</p></div>
+</div>
+<div id="online" class="help" role="dialog" aria-modal="true" aria-label="Online multiplayer">
+ <div class="help-inner online-inner"><button id="net-close" class="close">CLOSE</button><div class="overline">DISTANT KINGDOMS · DIRECT CONNECTION</div><h2>PLAY A FRIEND ANYWHERE</h2>
+ <p>Two Meta Quest browsers, or Quest and a computer. No account or server is required. Both players need a connection that supports peer-to-peer WebRTC.</p>
+ <div id="net-status" class="net-status">NOT CONNECTED</div>
+ <div class="net-actions"><button id="net-host" class="golden">1 · HOST AS IVORY</button><button id="net-join">2 · JOIN AS CRIMSON</button></div>
+ <label class="net-label" for="net-in">PASTE A CODE RECEIVED FROM YOUR FRIEND</label><textarea id="net-in" spellcheck="false" placeholder="Paste the complete invitation from the host, or the guest's reply..."></textarea>
+ <div class="net-actions"><button id="net-accept">3 · HOST ACCEPTS REPLY</button><button id="net-copy">COPY MY CODE</button></div>
+ <label class="net-label" for="net-out">MY CODE · SEND THIS TO YOUR FRIEND</label><textarea id="net-out" spellcheck="false" readonly placeholder="Your invitation or reply appears here..."></textarea>
+ <p class="net-note">Host: click Host, send your code. Guest: paste that code, click Join, send your reply. Host: paste the reply and click Accept. You can close this panel when Connected.</p>
+ <button id="net-disconnect">END ONLINE MATCH</button>
+ </div></div>
+</body></html>

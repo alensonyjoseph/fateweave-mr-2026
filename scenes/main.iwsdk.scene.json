@@ -1,0 +1,3675 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "components": {
+    "com.iwsdk.components.DomeGradient": {
+      "sky": [
+        0.02,
+        0.029,
+        0.052,
+        1
+      ],
+      "equator": [
+        0.05,
+        0.055,
+        0.09,
+        1
+      ],
+      "ground": [
+        0.013,
+        0.014,
+        0.022,
+        1
+      ],
+      "intensity": 0.3
+    },
+    "com.iwsdk.components.IBLGradient": {
+      "sky": [
+        0.55,
+        0.54,
+        0.62,
+        1
+      ],
+      "equator": [
+        0.23,
+        0.23,
+        0.3,
+        1
+      ],
+      "ground": [
+        0.1,
+        0.09,
+        0.12,
+        1
+      ],
+      "intensity": 0.45
+    }
+  },
+  "environment": {
+    "toneMapping": "aces",
+    "exposure": 1.1,
+    "shadows": false,
+    "shadowMapType": "pcf"
+  },
+  "resources": {},
+  "authoring": {
+    "views": [
+      {
+        "id": "hero",
+        "role": "hero",
+        "projection": "perspective",
+        "position": [
+          0.02,
+          1.62,
+          0.29
+        ],
+        "target": [
+          0,
+          0.91,
+          -1.09
+        ],
+        "fov": 52
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "LivingTable",
+      "name": "Living Table",
+      "content": {
+        "type": "group"
+      },
+      "transform": {
+        "position": [
+          0,
+          0.88,
+          -1.08
+        ]
+      },
+      "children": [
+        {
+          "id": "WarBoard",
+          "name": "Marble Battlefield",
+          "content": {
+            "type": "asset",
+            "asset": "LivingBoard"
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "id": "Sq_a1",
+          "name": "Square a1",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "a1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_a1",
+          "name": "Legal hint a1",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_b1",
+          "name": "Square b1",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "b1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_b1",
+          "name": "Legal hint b1",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_c1",
+          "name": "Square c1",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "c1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_c1",
+          "name": "Legal hint c1",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_d1",
+          "name": "Square d1",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "d1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_d1",
+          "name": "Legal hint d1",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_e1",
+          "name": "Square e1",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "e1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_e1",
+          "name": "Legal hint e1",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_f1",
+          "name": "Square f1",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "f1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_f1",
+          "name": "Legal hint f1",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_g1",
+          "name": "Square g1",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "g1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_g1",
+          "name": "Legal hint g1",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_h1",
+          "name": "Square h1",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "h1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_h1",
+          "name": "Legal hint h1",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_a2",
+          "name": "Square a2",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "a2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_a2",
+          "name": "Legal hint a2",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_b2",
+          "name": "Square b2",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "b2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_b2",
+          "name": "Legal hint b2",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_c2",
+          "name": "Square c2",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "c2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_c2",
+          "name": "Legal hint c2",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_d2",
+          "name": "Square d2",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "d2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_d2",
+          "name": "Legal hint d2",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_e2",
+          "name": "Square e2",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "e2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_e2",
+          "name": "Legal hint e2",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_f2",
+          "name": "Square f2",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "f2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_f2",
+          "name": "Legal hint f2",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_g2",
+          "name": "Square g2",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "g2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_g2",
+          "name": "Legal hint g2",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_h2",
+          "name": "Square h2",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "h2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_h2",
+          "name": "Legal hint h2",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_a3",
+          "name": "Square a3",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "a3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_a3",
+          "name": "Legal hint a3",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_b3",
+          "name": "Square b3",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "b3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_b3",
+          "name": "Legal hint b3",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_c3",
+          "name": "Square c3",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "c3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_c3",
+          "name": "Legal hint c3",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_d3",
+          "name": "Square d3",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "d3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_d3",
+          "name": "Legal hint d3",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_e3",
+          "name": "Square e3",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "e3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_e3",
+          "name": "Legal hint e3",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_f3",
+          "name": "Square f3",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "f3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_f3",
+          "name": "Legal hint f3",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_g3",
+          "name": "Square g3",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "g3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_g3",
+          "name": "Legal hint g3",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_h3",
+          "name": "Square h3",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "h3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_h3",
+          "name": "Legal hint h3",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_a4",
+          "name": "Square a4",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "a4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_a4",
+          "name": "Legal hint a4",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_b4",
+          "name": "Square b4",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "b4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_b4",
+          "name": "Legal hint b4",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_c4",
+          "name": "Square c4",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "c4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_c4",
+          "name": "Legal hint c4",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_d4",
+          "name": "Square d4",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "d4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_d4",
+          "name": "Legal hint d4",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_e4",
+          "name": "Square e4",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "e4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_e4",
+          "name": "Legal hint e4",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_f4",
+          "name": "Square f4",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "f4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_f4",
+          "name": "Legal hint f4",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_g4",
+          "name": "Square g4",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "g4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_g4",
+          "name": "Legal hint g4",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_h4",
+          "name": "Square h4",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "h4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_h4",
+          "name": "Legal hint h4",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_a5",
+          "name": "Square a5",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              -0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "a5"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_a5",
+          "name": "Legal hint a5",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              -0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_b5",
+          "name": "Square b5",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              -0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "b5"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_b5",
+          "name": "Legal hint b5",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              -0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_c5",
+          "name": "Square c5",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              -0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "c5"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_c5",
+          "name": "Legal hint c5",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              -0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_d5",
+          "name": "Square d5",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              -0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "d5"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_d5",
+          "name": "Legal hint d5",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              -0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_e5",
+          "name": "Square e5",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              -0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "e5"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_e5",
+          "name": "Legal hint e5",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              -0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_f5",
+          "name": "Square f5",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              -0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "f5"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_f5",
+          "name": "Legal hint f5",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              -0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_g5",
+          "name": "Square g5",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              -0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "g5"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_g5",
+          "name": "Legal hint g5",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              -0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_h5",
+          "name": "Square h5",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              -0.044
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "h5"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_h5",
+          "name": "Legal hint h5",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              -0.044
+            ]
+          }
+        },
+        {
+          "id": "Sq_a6",
+          "name": "Square a6",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              -0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "a6"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_a6",
+          "name": "Legal hint a6",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              -0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_b6",
+          "name": "Square b6",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              -0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "b6"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_b6",
+          "name": "Legal hint b6",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              -0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_c6",
+          "name": "Square c6",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              -0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "c6"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_c6",
+          "name": "Legal hint c6",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              -0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_d6",
+          "name": "Square d6",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              -0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "d6"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_d6",
+          "name": "Legal hint d6",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              -0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_e6",
+          "name": "Square e6",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              -0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "e6"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_e6",
+          "name": "Legal hint e6",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              -0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_f6",
+          "name": "Square f6",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              -0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "f6"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_f6",
+          "name": "Legal hint f6",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              -0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_g6",
+          "name": "Square g6",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              -0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "g6"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_g6",
+          "name": "Legal hint g6",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              -0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_h6",
+          "name": "Square h6",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              -0.132
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "h6"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_h6",
+          "name": "Legal hint h6",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              -0.132
+            ]
+          }
+        },
+        {
+          "id": "Sq_a7",
+          "name": "Square a7",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              -0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "a7"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_a7",
+          "name": "Legal hint a7",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              -0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_b7",
+          "name": "Square b7",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              -0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "b7"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_b7",
+          "name": "Legal hint b7",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              -0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_c7",
+          "name": "Square c7",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              -0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "c7"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_c7",
+          "name": "Legal hint c7",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              -0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_d7",
+          "name": "Square d7",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              -0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "d7"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_d7",
+          "name": "Legal hint d7",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              -0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_e7",
+          "name": "Square e7",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              -0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "e7"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_e7",
+          "name": "Legal hint e7",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              -0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_f7",
+          "name": "Square f7",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              -0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "f7"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_f7",
+          "name": "Legal hint f7",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              -0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_g7",
+          "name": "Square g7",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              -0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "g7"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_g7",
+          "name": "Legal hint g7",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              -0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_h7",
+          "name": "Square h7",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              -0.22
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "h7"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_h7",
+          "name": "Legal hint h7",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              -0.22
+            ]
+          }
+        },
+        {
+          "id": "Sq_a8",
+          "name": "Square a8",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              -0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "a8"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_a8",
+          "name": "Legal hint a8",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0,
+              -0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_b8",
+          "name": "Square b8",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              -0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "b8"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_b8",
+          "name": "Legal hint b8",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0,
+              -0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_c8",
+          "name": "Square c8",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              -0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "c8"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_c8",
+          "name": "Legal hint c8",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0,
+              -0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_d8",
+          "name": "Square d8",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              -0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "d8"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_d8",
+          "name": "Legal hint d8",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0,
+              -0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_e8",
+          "name": "Square e8",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              -0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "e8"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_e8",
+          "name": "Legal hint e8",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0,
+              -0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_f8",
+          "name": "Square f8",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              -0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "f8"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_f8",
+          "name": "Legal hint f8",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0,
+              -0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_g8",
+          "name": "Square g8",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              -0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "g8"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_g8",
+          "name": "Legal hint g8",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0,
+              -0.308
+            ]
+          }
+        },
+        {
+          "id": "Sq_h8",
+          "name": "Square h8",
+          "content": {
+            "type": "asset",
+            "asset": "SquareTarget"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              -0.308
+            ]
+          },
+          "components": {
+            "ChessSquare": {
+              "square": "h8"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Hint_h8",
+          "name": "Legal hint h8",
+          "content": {
+            "type": "asset",
+            "asset": "LegalHint"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0,
+              -0.308
+            ]
+          }
+        },
+        {
+          "id": "Unit_b_r_a8",
+          "name": "Warrior a8",
+          "content": {
+            "type": "asset",
+            "asset": "b_r"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0.04,
+              -0.308
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "a8",
+              "side": "b",
+              "kind": "r",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_n_b8",
+          "name": "Warrior b8",
+          "content": {
+            "type": "asset",
+            "asset": "b_n"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0.04,
+              -0.308
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "b8",
+              "side": "b",
+              "kind": "n",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_b_c8",
+          "name": "Warrior c8",
+          "content": {
+            "type": "asset",
+            "asset": "b_b"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0.04,
+              -0.308
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "c8",
+              "side": "b",
+              "kind": "b",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_q_d8",
+          "name": "Warrior d8",
+          "content": {
+            "type": "asset",
+            "asset": "b_q"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0.04,
+              -0.308
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "d8",
+              "side": "b",
+              "kind": "q",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_k_e8",
+          "name": "Warrior e8",
+          "content": {
+            "type": "asset",
+            "asset": "b_k"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0.04,
+              -0.308
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "e8",
+              "side": "b",
+              "kind": "k",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_b_f8",
+          "name": "Warrior f8",
+          "content": {
+            "type": "asset",
+            "asset": "b_b"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0.04,
+              -0.308
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "f8",
+              "side": "b",
+              "kind": "b",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_n_g8",
+          "name": "Warrior g8",
+          "content": {
+            "type": "asset",
+            "asset": "b_n"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0.04,
+              -0.308
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "g8",
+              "side": "b",
+              "kind": "n",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_r_h8",
+          "name": "Warrior h8",
+          "content": {
+            "type": "asset",
+            "asset": "b_r"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0.04,
+              -0.308
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "h8",
+              "side": "b",
+              "kind": "r",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_p_a7",
+          "name": "Warrior a7",
+          "content": {
+            "type": "asset",
+            "asset": "b_p"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0.04,
+              -0.22
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "a7",
+              "side": "b",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_p_b7",
+          "name": "Warrior b7",
+          "content": {
+            "type": "asset",
+            "asset": "b_p"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0.04,
+              -0.22
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "b7",
+              "side": "b",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_p_c7",
+          "name": "Warrior c7",
+          "content": {
+            "type": "asset",
+            "asset": "b_p"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0.04,
+              -0.22
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "c7",
+              "side": "b",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_p_d7",
+          "name": "Warrior d7",
+          "content": {
+            "type": "asset",
+            "asset": "b_p"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0.04,
+              -0.22
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "d7",
+              "side": "b",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_p_e7",
+          "name": "Warrior e7",
+          "content": {
+            "type": "asset",
+            "asset": "b_p"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0.04,
+              -0.22
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "e7",
+              "side": "b",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_p_f7",
+          "name": "Warrior f7",
+          "content": {
+            "type": "asset",
+            "asset": "b_p"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0.04,
+              -0.22
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "f7",
+              "side": "b",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_p_g7",
+          "name": "Warrior g7",
+          "content": {
+            "type": "asset",
+            "asset": "b_p"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0.04,
+              -0.22
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "g7",
+              "side": "b",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_b_p_h7",
+          "name": "Warrior h7",
+          "content": {
+            "type": "asset",
+            "asset": "b_p"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0.04,
+              -0.22
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "h7",
+              "side": "b",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_p_a2",
+          "name": "Warrior a2",
+          "content": {
+            "type": "asset",
+            "asset": "w_p"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0.04,
+              0.22
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "a2",
+              "side": "w",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_p_b2",
+          "name": "Warrior b2",
+          "content": {
+            "type": "asset",
+            "asset": "w_p"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0.04,
+              0.22
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "b2",
+              "side": "w",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_p_c2",
+          "name": "Warrior c2",
+          "content": {
+            "type": "asset",
+            "asset": "w_p"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0.04,
+              0.22
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "c2",
+              "side": "w",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_p_d2",
+          "name": "Warrior d2",
+          "content": {
+            "type": "asset",
+            "asset": "w_p"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0.04,
+              0.22
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "d2",
+              "side": "w",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_p_e2",
+          "name": "Warrior e2",
+          "content": {
+            "type": "asset",
+            "asset": "w_p"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0.04,
+              0.22
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "e2",
+              "side": "w",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_p_f2",
+          "name": "Warrior f2",
+          "content": {
+            "type": "asset",
+            "asset": "w_p"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0.04,
+              0.22
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "f2",
+              "side": "w",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_p_g2",
+          "name": "Warrior g2",
+          "content": {
+            "type": "asset",
+            "asset": "w_p"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0.04,
+              0.22
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "g2",
+              "side": "w",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_p_h2",
+          "name": "Warrior h2",
+          "content": {
+            "type": "asset",
+            "asset": "w_p"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0.04,
+              0.22
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "h2",
+              "side": "w",
+              "kind": "p",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_r_a1",
+          "name": "Warrior a1",
+          "content": {
+            "type": "asset",
+            "asset": "w_r"
+          },
+          "transform": {
+            "position": [
+              -0.308,
+              0.04,
+              0.308
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "a1",
+              "side": "w",
+              "kind": "r",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_n_b1",
+          "name": "Warrior b1",
+          "content": {
+            "type": "asset",
+            "asset": "w_n"
+          },
+          "transform": {
+            "position": [
+              -0.22,
+              0.04,
+              0.308
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "b1",
+              "side": "w",
+              "kind": "n",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_b_c1",
+          "name": "Warrior c1",
+          "content": {
+            "type": "asset",
+            "asset": "w_b"
+          },
+          "transform": {
+            "position": [
+              -0.132,
+              0.04,
+              0.308
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "c1",
+              "side": "w",
+              "kind": "b",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_q_d1",
+          "name": "Warrior d1",
+          "content": {
+            "type": "asset",
+            "asset": "w_q"
+          },
+          "transform": {
+            "position": [
+              -0.044,
+              0.04,
+              0.308
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "d1",
+              "side": "w",
+              "kind": "q",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_k_e1",
+          "name": "Warrior e1",
+          "content": {
+            "type": "asset",
+            "asset": "w_k"
+          },
+          "transform": {
+            "position": [
+              0.044,
+              0.04,
+              0.308
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "e1",
+              "side": "w",
+              "kind": "k",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_b_f1",
+          "name": "Warrior f1",
+          "content": {
+            "type": "asset",
+            "asset": "w_b"
+          },
+          "transform": {
+            "position": [
+              0.132,
+              0.04,
+              0.308
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "f1",
+              "side": "w",
+              "kind": "b",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_n_g1",
+          "name": "Warrior g1",
+          "content": {
+            "type": "asset",
+            "asset": "w_n"
+          },
+          "transform": {
+            "position": [
+              0.22,
+              0.04,
+              0.308
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "g1",
+              "side": "w",
+              "kind": "n",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Unit_w_r_h1",
+          "name": "Warrior h1",
+          "content": {
+            "type": "asset",
+            "asset": "w_r"
+          },
+          "transform": {
+            "position": [
+              0.308,
+              0.04,
+              0.308
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "ChessPiece": {
+              "square": "h1",
+              "side": "w",
+              "kind": "r",
+              "alive": true
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Action_new",
+          "name": "Control new",
+          "content": {
+            "type": "asset",
+            "asset": "RuneButton"
+          },
+          "transform": {
+            "position": [
+              -0.315,
+              0,
+              0.463
+            ]
+          },
+          "components": {
+            "ChessButton": {
+              "action": "new"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Action_fate",
+          "name": "Control fate",
+          "content": {
+            "type": "asset",
+            "asset": "RuneButton"
+          },
+          "transform": {
+            "position": [
+              -0.189,
+              0,
+              0.463
+            ]
+          },
+          "components": {
+            "ChessButton": {
+              "action": "fate"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Action_ai",
+          "name": "Control ai",
+          "content": {
+            "type": "asset",
+            "asset": "RuneButton"
+          },
+          "transform": {
+            "position": [
+              -0.063,
+              0,
+              0.463
+            ]
+          },
+          "components": {
+            "ChessButton": {
+              "action": "ai"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Action_level",
+          "name": "Control level",
+          "content": {
+            "type": "asset",
+            "asset": "RuneButton"
+          },
+          "transform": {
+            "position": [
+              0.063,
+              0,
+              0.463
+            ]
+          },
+          "components": {
+            "ChessButton": {
+              "action": "level"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Action_undo",
+          "name": "Control undo",
+          "content": {
+            "type": "asset",
+            "asset": "RuneButton"
+          },
+          "transform": {
+            "position": [
+              0.189,
+              0,
+              0.463
+            ]
+          },
+          "components": {
+            "ChessButton": {
+              "action": "undo"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Action_voice",
+          "name": "Control voice",
+          "content": {
+            "type": "asset",
+            "asset": "RuneButton"
+          },
+          "transform": {
+            "position": [
+              0.315,
+              0,
+              0.463
+            ]
+          },
+          "components": {
+            "ChessButton": {
+              "action": "voice"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Future_0",
+          "name": "Possible future 1",
+          "content": {
+            "type": "asset",
+            "asset": "FateMarker"
+          },
+          "transform": {
+            "position": [
+              -0.11,
+              0,
+              0.08
+            ]
+          },
+          "components": {
+            "FateBranch": {
+              "branch": 0
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Future_1",
+          "name": "Possible future 2",
+          "content": {
+            "type": "asset",
+            "asset": "FateMarker"
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              0.08
+            ]
+          },
+          "components": {
+            "FateBranch": {
+              "branch": 1
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "Future_2",
+          "name": "Possible future 3",
+          "content": {
+            "type": "asset",
+            "asset": "FateMarker"
+          },
+          "transform": {
+            "position": [
+              0.11,
+              0,
+              0.08
+            ]
+          },
+          "components": {
+            "FateBranch": {
+              "branch": 2
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        }
+      ]
+    },
+    {
+      "id": "KeyLight",
+      "transform": {
+        "position": [
+          -2,
+          3,
+          1
+        ],
+        "rotationDeg": [
+          -40,
+          -30,
+          0
+        ]
+      },
+      "components": {
+        "com.iwsdk.components.DirectionalLight": {
+          "color": [
+            1,
+            0.85,
+            0.66,
+            1
+          ],
+          "intensity": 2,
+          "castShadow": false
+        }
+      }
+    },
+    {
+      "id": "AmbientFill",
+      "components": {
+        "com.iwsdk.components.AmbientLight": {
+          "color": [
+            0.54,
+            0.66,
+            0.84,
+            1
+          ],
+          "intensity": 0.8
+        }
+      }
+    }
+  ]
+}
